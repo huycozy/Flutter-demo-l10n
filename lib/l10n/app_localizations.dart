@@ -98,6 +98,12 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Hello World!'**
   String get helloWorld;
+
+  /// login failed toast
+  ///
+  /// In en, this message translates to:
+  /// **'Login failed!\n{message}'**
+  String loginFailed(String message);
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

@@ -2,5 +2,16 @@
   "helloWorld": "Hello World!",
   "@helloWorld": {
     "description": "The conventional newborn programmer greeting"
+  },
+  "loginFailed": "Login failed!\n{message}",
+  "@loginFailed": {
+    "type": "text",
+    "description": "login failed toast",
+    "placeholders": {
+      "message": {
+        "type": "String",
+        "example": "Invalid password!"
+      }
+    }
   }
 }

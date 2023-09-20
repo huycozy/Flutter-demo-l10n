@@ -7,6 +7,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:test_gen_l10n/l10n/app_localizations.dart';
 
 import 'package:test_gen_l10n/main.dart';
 
@@ -26,5 +27,24 @@ void main() {
     // Verify that our counter has incremented.
     expect(find.text('0'), findsNothing);
     expect(find.text('1'), findsOneWidget);
+  });
+
+  group('Locale Integration Tests', () {
+    final supportedLocale = AppLocalizations.supportedLocales[0]; // 'en'
+    final supportedLocaleAlternative = AppLocalizations.supportedLocales[1]; // 'es'
+    final supportedLocalesList = [supportedLocale, supportedLocaleAlternative];
+
+    testWidgets('Start in first device locale (supported)',
+            (WidgetTester tester) async {
+          tester.platformDispatcher.localesTestValue = supportedLocalesList;
+          expect(tester.platformDispatcher.locales, supportedLocalesList);
+
+          await tester.pumpWidget(const MyApp());
+          await tester.pumpAndSettle();
+          debugDumpApp();
+
+          final context = tester.element(find.byType(DemoHome));
+          expect(Localizations.localeOf(context), supportedLocalesList.first);
+        });
   });
 }

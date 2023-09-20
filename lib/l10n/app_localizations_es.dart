@@ -6,4 +6,9 @@ class AppLocalizationsEs extends AppLocalizations {
 
   @override
   String get helloWorld => '¡Hola Mundo!';
+
+  @override
+  String loginFailed(String message) {
+    return 'Login failed!\n$message';
+  }
 }
