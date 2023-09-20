@@ -30,7 +30,7 @@ void main() {
   });
 
   group('Locale Integration Tests', () {
-    final supportedLocale = AppLocalizations.supportedLocales[0]; // 'en'
+    final supportedLocale = AppLocalizations.supportedLocales[0]; // 'ar'
     final supportedLocaleAlternative = AppLocalizations.supportedLocales[1]; // 'es'
     final supportedLocalesList = [supportedLocale, supportedLocaleAlternative];
 
