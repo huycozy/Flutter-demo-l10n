@@ -8,7 +8,12 @@ class AppLocalizationsEn extends AppLocalizations {
   String get helloWorld => 'Hello World!';
 
   @override
-  String loginFailed(String message) {
+  String loginFailed({required String message}) {
     return 'Login failed!\n$message';
+  }
+
+  @override
+  String special({required int number, required int price}) {
+    return '$price foo $number zoo';
   }
 }

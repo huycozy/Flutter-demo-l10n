@@ -1,9 +1,9 @@
 {
-  "helloWorld": "Hello World!",
+  "helloWorld": "「こんにちは世界」",
   "@helloWorld": {
-    "description": "The conventional newborn programmer greeting"
+    "description": "hello world"
   },
-  "loginFailed": "Login failed!\n{message}",
+  "loginFailed": "ログインに失敗しました！\n{message}",
   "@loginFailed": {
     "type": "text",
     "description": "login failed toast",
