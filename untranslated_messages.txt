@@ -1,5 +1,5 @@
 {
   "es": [
-    "loginFailed"
+    "entityComment2Actors"
   ]
 }

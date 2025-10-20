@@ -39,7 +39,7 @@ class DemoHome extends StatelessWidget {
         child: Column(
           children: <Widget>[
             // Returns 'Hello John'
-            Text(AppLocalizations.of(context).helloWorld),
+            // Text(AppLocalizations.of(context).helloWorld),
           ],
         ),
       ),

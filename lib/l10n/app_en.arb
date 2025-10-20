@@ -1,17 +1,13 @@
 {
-  "helloWorld": "Hello World!",
-  "@helloWorld": {
-    "description": "The conventional newborn programmer greeting"
-  },
-  "loginFailed": "Login failed!\n{message}",
-  "@loginFailed": {
-    "type": "text",
-    "description": "login failed toast",
-    "placeholders": {
-      "message": {
-        "type": "String",
-        "example": "Invalid password!"
-      }
-    }
+  "entityComment2Actors": "{actor1} and {actor2}{otherCount, plural, =0{} one{ and 1 other} other{ and {otherCount} others}} commented on your {entityKind}{latestComment, select, null{.} other{: “{latestComment}”}}.",
+"@entityComment2Actors": {
+  "description": "Notification when comments are aggregated, showing two primary actors and the count of others.",
+  "placeholders": {
+    "actor1": { "type": "String" },
+    "actor2": { "type": "String" },
+    "otherCount": { "type": "int" },
+    "entityKind": { "type": "String" },
+    "latestComment": { "type": "String", "optional": true }
   }
+}
 }
